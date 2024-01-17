@@ -3,7 +3,10 @@ import "./App.css";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import AddTasks from "./components/AddTasks";
+import Footer from "./components/Footer";
 import { useState } from "react";
+import { BrowserRouter, Route, Routes, Router } from "react-router-dom";
+import About from "./components/About";
 function App() {
   const [tasks, setTasks] = useState([
     {
@@ -45,15 +48,28 @@ function App() {
     );
   };
   return (
+    <BrowserRouter>
+    
     <div className="container">
       <Header title="Task Manager" onAdd={()=>setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
       {showAddTask && <AddTasks onAdd={addTask} />}
+      <Routes>
+        <Route path="/" element= {<>
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
       ) : (
         "No Task to show"
       ) }
+    
+      </>}
+      />
+      <Route path="/about" element={<About/>} />
+      </Routes>
+      <Footer/>
+     
     </div>
+   
+    </BrowserRouter>
   );
 }
 
