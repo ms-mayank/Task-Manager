@@ -3,7 +3,7 @@ const About = () => {
   return (
     <div>
       <h4>About Section</h4>
-     <Link to="/">Go Back</Link>
+     <Link to="/Task-Manager">Go Back</Link>
     </div>
   )
 }

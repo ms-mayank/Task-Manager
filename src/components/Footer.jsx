@@ -11,7 +11,7 @@ const Footer = () => {
         }}>
         Footer &copy; This is footer
         <br />
-        <Link to="/about">About</Link>
+        <Link to="/Task-Manager/about">About</Link>
       </div>
     </>
   );
