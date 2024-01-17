@@ -15,7 +15,7 @@ npm start
 ### HTML & CSS
 
 
-
+### Deployment - Github pages
 The project is deployed on Github Pages
 
 
