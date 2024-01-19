@@ -9,6 +9,8 @@ import Appfooter from "./components/Appfooter";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes, Router } from "react-router-dom";
 import About from "./components/About";
+// import InstallPWA "./components/InstallPWA";
+import InstallPWA from './components/InstallPWA'
 function App() {
   const [tasks, setTasks] = useState([
     {
@@ -51,6 +53,7 @@ function App() {
   return (
     <BrowserRouter>
     <Nav/>
+    <InstallPWA/>
       <div className="container">
         <Appheader
           title="Task Manager"
