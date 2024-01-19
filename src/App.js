@@ -1,9 +1,11 @@
 // import logo from './logo.svg';
 import "./App.css";
-import Header from "./components/Header";
+import Nav from "./components/nav/Nav"
+import Footer from "./components/footer/Footer"
+import Appheader from "./components/Appheader";
 import Tasks from "./components/Tasks";
 import AddTasks from "./components/AddTasks";
-import Footer from "./components/Footer";
+import Appfooter from "./components/Appfooter";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes, Router } from "react-router-dom";
 import About from "./components/About";
@@ -48,8 +50,9 @@ function App() {
   };
   return (
     <BrowserRouter>
+    <Nav/>
       <div className="container">
-        <Header
+        <Appheader
           title="Task Manager"
           onAdd={() => setShowAddTask(!showAddTask)}
           showAdd={showAddTask}
@@ -76,8 +79,9 @@ function App() {
           <Route path="about" element={<About />} />
           </Route>
         </Routes>
-        <Footer />
+        <Appfooter />
       </div>
+      <Footer/>
     </BrowserRouter>
   );
 }

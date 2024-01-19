@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom'
-const Footer = () => {
+const Appfooter = () => {
   return (
     <>
 
@@ -9,12 +9,12 @@ const Footer = () => {
           color: "white",
           textAlign: "center",
         }}>
-        Footer &copy; This is footer
+        &copy; Get More info About the App &copy;
         <br />
-        <Link to="/Task-Manager/about">About</Link>
+        <Link className='btn btn-primary' to="/Task-Manager/about">Click to know About This App</Link>
       </div>
     </>
   );
 };
 
-export default Footer;
+export default Appfooter;
