@@ -29,7 +29,7 @@ const InstallPWA = () => {
   }
   return (
     <button
-    style={{ backgroundColor: 'purple', position:'fixed', top: '1rem', right:'1rem' }} className="btn"
+    style={{ backgroundColor: 'purple', position:'fixed'}} className="btn btn-install"
       aria-label="Install app"
       title="Install app"
       onClick={onClick}
